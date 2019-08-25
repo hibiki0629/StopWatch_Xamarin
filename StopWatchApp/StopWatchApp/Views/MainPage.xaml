@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StopWatchApp.Views.MainPage"
+             Title="{Binding Title}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Label Text="{Binding TimerLabel}" FontSize="60" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="Aqua"/>
+        </Grid>
+
+        <StackLayout Grid.Row="1">
+            <Label Text="{Binding LapLabel1}" FontSize="Medium"
+                   HorizontalTextAlignment="Center" VerticalOptions="FillAndExpand"
+                   VerticalTextAlignment="Center" BackgroundColor="Orange"/>
+            <Label Text="{Binding LapLabel2}" FontSize="Medium"
+                   HorizontalTextAlignment="Center" VerticalOptions="FillAndExpand"
+                   VerticalTextAlignment="Center" BackgroundColor="Orange"/>
+            <Label Text="{Binding LapLabel3}" FontSize="Medium"
+                   HorizontalTextAlignment="Center" VerticalOptions="FillAndExpand"
+                   VerticalTextAlignment="Center" BackgroundColor="Orange"/>
+        </StackLayout>
+
+        <StackLayout Grid.Row="2">
+            <Button VerticalOptions="FillAndExpand" 
+                    Text="{Binding TimerButtonText}"
+                    Command="{Binding TimerButton_Clicked}"/>
+            <Button VerticalOptions="FillAndExpand"
+                    Text="ラップ"
+                    Command="{Binding LapButton_Clicked}"/>
+        </StackLayout>
+        
+    </Grid>        
+    
+</ContentPage>
